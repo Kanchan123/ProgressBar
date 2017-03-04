@@ -1,0 +1,16 @@
+<div ng-controller="ProgressBarController" class="main-controller">
+    <div class="row" ng-repeat="progressBar in progresBarList track by $index" style="margin: 2%;">
+        <div progress-bar limit-value="limitValue" progress-value="progressBar" style="width: 100%;"></div>
+    </div>
+    <div class="row" style="text-align: center;">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12" style="padding: 2px 0px;">
+            <select ng-model="selectedProgressBar">
+                <option ng-repeat="progressBar in progresBarList track by $index" value="{{$index}}">{{'Progress Bar '+ ($index+1)}}</option>
+            </select>
+        </div>
+        <div ng-repeat="buttonValue in buttonList" class="col-lg-1 col-md-2 col-sm-2 col-sx-6" style="padding: 2px 0px;">
+            <button type="button" class="btn" ng-click="changeProgressBar(buttonValue)" ng-class="{'btn-primary': buttonValue>=0,'btn-danger':buttonValue<0}">{{buttonValue}}</button>
+        </div>
+        
+    </div>
+</div>

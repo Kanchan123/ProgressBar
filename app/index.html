@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar Test</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+</head>
+<body ng-app="progressbar">
+    <section>
+        <!-- Header -->
+        <header>
+            <ng-include src="'templates/partials/header.html'"></ng-include>
+        </header>
+
+        <!-- Content -->
+        <div id="content" ui-view=""></div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Libs -->
+            <script src="js/lib.min.js"></script>
+            <!-- Application -->
+            <script src="js/all.js"></script>
+        </footer>
+    </section>
+</body>
+    
+</html>
